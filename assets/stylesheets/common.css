@@ -1,0 +1,276 @@
+/* Common Page Styles */
+.page-container {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px - 100px);
+}
+
+.page-hero {
+    background: linear-gradient(rgba(0, 132, 61, 0.9), rgba(0, 132, 61, 0.9));
+    color: var(--secondary-color);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Speakers Page Styles */
+.speakers-grid {
+    max-width: 1200px;
+    margin: -3rem auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.speaker-card {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+}
+
+.speaker-image {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.speaker-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.speaker-info {
+    padding: 1.5rem;
+}
+
+.speaker-info h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.speaker-role {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.speaker-company {
+    display: block;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.speaker-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.speaker-topics span {
+    background: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* Schedule Page Styles */
+.schedule-container {
+    max-width: 1000px;
+    margin: -3rem auto 4rem;
+    padding: 2rem;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.schedule-tab {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.schedule-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.time-slot {
+    text-align: right;
+}
+
+.time {
+    display: block;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.event-card {
+    background: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.event-card h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.event-location {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.event-speakers {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.event-speakers img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+/* Venue Page Styles */
+.venue-container {
+    max-width: 1200px;
+    margin: -3rem auto 4rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.venue-info-card {
+    background: var(--secondary-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.venue-details h2,
+.venue-amenities h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-item svg {
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.info-item h3 {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.amenity-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.venue-map {
+    background: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.venue-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .venue-container {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .time-slot {
+        text-align: left;
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-nav {
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .schedule-tab {
+        padding: 0.5rem 1rem;
+    }
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigeria Net - Register</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Nigeria Net</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="speakers.html">Speakers</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="venue.html">Venue</a>
+                <a href="register.html">Register</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="register-container">
+        <section class="register-hero">
+            <h1>Register for Nigeria Net 2024</h1>
+            <p>Join the biggest tech conference in Nigeria</p>
+        </section>
+
+        <section class="registration-form-container">
+            <div class="form-card">
+                <h2>Registration Details</h2>
+                <form id="registrationForm" class="registration-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required 
+                               placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   placeholder="Enter your phone number">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company">Company/Organization</label>
+                            <input type="text" id="company" name="company" 
+                                   placeholder="Enter your company name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Your Role</label>
+                        <select id="role" name="role">
+                            <option value="">Select your role</option>
+                            <option value="developer">Developer</option>
+                            <option value="designer">Designer</option>
+                            <option value="product_manager">Product Manager</option>
+                            <option value="student">Student</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dietary">Dietary Requirements</label>
+                        <select id="dietary" name="dietary">
+                            <option value="none">No specific requirements</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="halal">Halal</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">I would like to receive updates about future events</label>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the terms and conditions *</label>
+                    </div>
+
+                    <button type="submit" class="submit-button">Complete Registration</button>
+                </form>
+            </div>
+
+            <div class="registration-info">
+                <div class="info-card">
+                    <h3>What's Included</h3>
+                    <ul>
+                        <li>Access to all conference sessions</li>
+                        <li>Workshop materials</li>
+                        <li>Lunch and refreshments</li>
+                        <li>Networking events</li>
+                        <li>Conference swag bag</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nigeria Net Conference</p>
+            <div class="footer-nav">
+                <a href="index.html">Home</a>
+                <a href="speakers.html">Speakers</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="venue.html">Venue</a>
+                <a href="register.html">Register</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <h3>Registration Successful!</h3>
+            <p>Thank you for registering for Nigeria Net 2024.</p>
+            <p>We've sent a confirmation email to your inbox.</p>
+            <button onclick="closeModal()" class="modal-button">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const registrationForm = document.getElementById('registrationForm');
+        const successModal = document.getElementById('successModal');
+
+        registrationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Form validation would go here
+            
+            // Show success modal
+            successModal.style.display = 'flex';
+            
+            // Reset form
+            registrationForm.reset();
+        });
+
+        function closeModal() {
+            successModal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target == successModal) {
+                successModal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
